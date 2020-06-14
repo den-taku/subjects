@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 void f1(float data[], int n, int t, float size);
@@ -42,6 +43,15 @@ int main(){
   for(int i = 0; i < n; i++){
     cout << "( " << data[2 * i] << ", " << data[2 * i + 1] << " )" << endl;
   } 
+
+  ofstream values;
+  values.open("values.csv", ios::out | ios::binary | ios::trunc);
+  if(! values.is_open()){
+    return EXIT_FAILURE;
+  }
+  for(int i = 0; i < n; i++){
+    values << data[2 * i] << "," << data[2 * i + 1] << endl;
+  }
 
   return 0;
 }  
