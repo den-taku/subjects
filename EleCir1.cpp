@@ -6,9 +6,13 @@ void f2(float data[], int n, int t, float size);
 void f3(float data[], int n, int t, float size);
 
 //Coefficients  |a->      <-b|c-> 
-const float a1 = -0.3, b1 = -0.3, c1 = 0.6;
-const float a2 = -0.3, b2 = -0.3, c2 = 0.6;
-const float a3 =    1, b3 = -0.3, c3 = 0.6;
+//const float a1 = -(1.0/3.0), b1 = -(1.0/3.0), c1 = (2.0/3.0);
+//const float a2 = -(1.0/3.0), b2 = -(1.0/3.0), c2 = (2.0/3.0);
+//const float a3 =        1.0, b3 = -(1.0/3.0), c3 = (2.0/3.0);
+
+const float a1 = -0.333, b1 = -0.333, c1 = 0.666;
+const float a2 = -0.333, b2 = -0.333, c2 = 0.666;
+const float a3 =    1.0, b3 = -0.333, c3 = 0.666;
 
 int main(){
   int n = 0;
