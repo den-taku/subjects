@@ -8,7 +8,12 @@ int main(){
   cout << ">> " << flush;
   cin >> n;
 
-  cout << n << endl;
+  //cout << n << endl;
+  int a[n][2] = {0};
+
+  for(int i = 0; i < n; i++){
+    cout << "( " << a[i][0] << ", " << a[i][1] << " )" << endl;
+  } 
 
   return 0;
 }  
