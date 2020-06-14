@@ -12,12 +12,17 @@ const float a3 =    1, b3 = -0.3, c3 = 0.6;
 
 int main(){
   int n = 0;
+  float V = 0;
 
     //cout << a1 << b1 << c1 << endl;
 
   cout << "How many times do you want to see?" << endl;
   cout << ">> " << flush;
   cin >> n;
+
+  cout << "How much V do you first applicate?" << endl;
+  cout << ">> " << flush;
+  cin >> V; 
 
     //cout << n << endl;
   // initialize data (t, V(t))
@@ -28,7 +33,7 @@ int main(){
     data[2 * i] += 2 * i + 1;
   }
 
-  f1(data, n, 0, 10);
+  f1(data, n, 0, V);
 
   for(int i = 0; i < n; i++){
     cout << "( " << data[2 * i] << ", " << data[2 * i + 1] << " )" << endl;
