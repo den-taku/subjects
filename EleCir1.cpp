@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-void f1(int** data, int n, int t, float size);
-void f2(int** data, int n, int t, float size);
-void f3(int** data, int n, int t, float size);
+void f1(float data[], int n, int t, float size);
+void f2(float data[], int n, int t, float size);
+void f3(float data[], int n, int t, float size);
 
 //Coefficients  |a->      <-b|c-> 
 const float a1 = -0.3, b1 = -0.3, c1 = 0.6;
@@ -21,22 +21,24 @@ int main(){
 
     //cout << n << endl;
   // initialize data (t, V(t))
-  int data[n][2] = {0};
+  float data[2 * n] = {0};
 
   // initialize t  <- 1, 3, 5, 7, 9, ...
   for(int i = 0; i < n; i++){
-    data[i][0] += 2 * i + 1;
+    data[2 * i] += 2 * i + 1;
   }
 
+  f1(data, n, 0, 10);
+
   for(int i = 0; i < n; i++){
-    cout << "( " << data[i][0] << ", " << data[i][1] << " )" << endl;
+    cout << "( " << data[2 * i] << ", " << data[2 * i + 1] << " )" << endl;
   } 
 
   return 0;
 }  
 
-void f1(int** data, int n, int t, float size){
-  data[t][1] += c1 * size;
+void f1(float data[], int n, int t, float size){
+  data[2 * t + 1] += c1 * size;
   t++;
   if(t >= n){
     return;
@@ -46,8 +48,8 @@ void f1(int** data, int n, int t, float size){
   f2(data, n, t, a3 * c1 * size);
 }
 
-void f2(int** data, int n, int t, float size){
-  data[t][1] += c2 * size;
+void f2(float data[], int n, int t, float size){
+  data[2 * t + 1] += c2 * size;
   t++;
   if(t >= n){
     return;
@@ -57,8 +59,8 @@ void f2(int** data, int n, int t, float size){
   f2(data, n, t, a3 * c2 * size);
 }
 
-void f3(int** data, int n, int t, float size){
-  data[t][1] += c3 * size;
+void f3(float data[], int n, int t, float size){
+  data[2 * t + 1] += c3 * size;
   t++;
   if(t >= n){
     return;
