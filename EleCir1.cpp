@@ -38,7 +38,10 @@ int main(){
 }  
 
 void f1(float data[], int n, int t, float size){
-  data[2 * t + 1] += c1 * size;
+  //data[2 * t + 1] += c1 * size;
+  for(int i = t; i < n; i++){
+    data[2 * i + 1] += c1 * size;
+  } 
   t++;
   if(t >= n){
     return;
@@ -49,7 +52,10 @@ void f1(float data[], int n, int t, float size){
 }
 
 void f2(float data[], int n, int t, float size){
-  data[2 * t + 1] += c2 * size;
+  //data[2 * t + 1] += c2 * size;
+  for(int i = t; i < n; i++){
+    data[2 * i + 1] += c2 * size;
+  }
   t++;
   if(t >= n){
     return;
@@ -60,7 +66,10 @@ void f2(float data[], int n, int t, float size){
 }
 
 void f3(float data[], int n, int t, float size){
-  data[2 * t + 1] += c3 * size;
+  //data[2 * t + 1] += c3 * size;
+  for(int i = t; i < n; i++){
+    data[2 * i + 1] += c3 * size;
+  }
   t++;
   if(t >= n){
     return;
