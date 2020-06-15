@@ -1,6 +1,3 @@
-# subjects
-files for solving subjects
-
 ## Description
 これは電気回路第２章演習問題９のP点における電圧値の変化を計算するプログラムです。 <br>
 P点からみた時の各線路について <br>
