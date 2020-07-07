@@ -67,7 +67,7 @@ void f1(float data[], int n, int t, float size){
   }
   f1(data, n, t, a1 * b1 * size);
   f2(data, n, t, a2 * c1 * size);
-  f2(data, n, t, a3 * c1 * size);
+  f3(data, n, t, a3 * c1 * size);
 }
 
 void f2(float data[], int n, int t, float size){
@@ -81,7 +81,7 @@ void f2(float data[], int n, int t, float size){
   }
   f1(data, n, t, a1 * c2 * size);
   f2(data, n, t, a2 * b2 * size);
-  f2(data, n, t, a3 * c2 * size);
+  f3(data, n, t, a3 * c2 * size);
 }
 
 void f3(float data[], int n, int t, float size){
@@ -95,7 +95,7 @@ void f3(float data[], int n, int t, float size){
   }
   f1(data, n, t, a1 * c3 * size);
   f2(data, n, t, a2 * c3 * size);
-  f2(data, n, t, a3 * b3 * size);
+  f3(data, n, t, a3 * b3 * size);
 }
 
 
